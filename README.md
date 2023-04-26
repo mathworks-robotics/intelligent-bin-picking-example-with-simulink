@@ -1,4 +1,4 @@
-# Intelligent Bin Picking with Universal Robots UR5e Cobot for a semi-random object distribution using Simulink&reg
+# Intelligent Bin Picking with Universal Robots UR5e Cobot for a semi-random object distribution using Simulink&reg;
 <!-- This is the "Title of the contribution" that was approved during the Community Contribution Review Process --> 
 
 [![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/####-file-exchange-title)  
