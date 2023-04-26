@@ -7,6 +7,8 @@
 An Intelligent Bin Picking application consists of a perception algorithm to detect objects and a motion planning algorithm that creates the trajectory path of the robot to pick up the object. First the positions and orientations of the objects lying in the bin are identified from the Camera images using Deep Learning based Image processing capability from Computer Vision Toolbox. The calculated pose is then passed to motion-planning algorithm as an input which plans the path and the trajectory is generated for the Cobot to pick the objects from the bin and place it. 
 Using the [Robotics System Toolbox&trade; Support Package for Universal Robots UR Series Manipulators](https://www.mathworks.com/matlabcentral/fileexchange/117530-robotics-system-toolboxtm-support-package-for-universal-robots-ur-series-manipulators), you can establish ROS communication with Universal Robots manipulators and send the generated trajectory for the Cobot to pick up and place the objects at a destination location.This example is a Simulink based solution for the featured examples [Semi-Structured Intelligent Bin Picking for UR5e Using YOLO and PCA-Based Object Detection](https://in.mathworks.com/help/supportpkg/urseries/ug/semi-structured-bin-picking-ur5e-yolo-pca-example.html) and [Gazebo Simulation of Semi-Structured Intelligent Bin Picking for UR5e Using YOLO and PCA-Based Object Detection](https://in.mathworks.com/help/supportpkg/urseries/ug/gazebo-simulation-ur5e-semistructured-intelligent-bin-picking-example.html).
 
+https://user-images.githubusercontent.com/128445518/234558967-2db2ec25-df10-4414-b937-832183e24c95.mp4
+
 <!--- If your project includes a visualation or any images or an App please include a screenshot in this README --->
 
 <!--- Markdown supports the following HTML entities: © - &copy;  ® - &reg;  ™ - &trade;
@@ -46,6 +48,8 @@ Installation instructions
 Open the the project to get started with bin picking example.The MLX file associated have the necessory background and steps to complate the example.
 
 open('IntelligentBinPickingExampleWithSimulink.prj')
+
+
 
 ## Basic Examples
 
