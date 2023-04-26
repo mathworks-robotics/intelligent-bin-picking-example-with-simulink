@@ -1,5 +1,7 @@
 %%Reset objects
 % create mesh
+%   Copyright 2023 The MathWorks, Inc.
+
 px1 = -0.20:0.12:0.24;
 py1 = -0.12:0.11:0.12;
 

@@ -1,3 +1,5 @@
+%   Copyright 2023 The MathWorks, Inc.
+
 prompt = {'Enter IP address of Robot:'};
 dlgtitle = 'Robot IP Address';
 dims = [1 50];
