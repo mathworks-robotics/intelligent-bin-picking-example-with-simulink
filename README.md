@@ -21,6 +21,7 @@ More information about Trademarks can be found internally within the Checklist f
 Requires MATLAB&reg; release R2023a or higher
 - [MATLAB&reg;](https://www.mathworks.com/products/matlab.html)
 - [Simulink&reg;](https://in.mathworks.com/products/simulink.html)
+- [Stateflow&reg;](https://in.mathworks.com/products/stateflow.html)
 - [Robotics System Toolbox&trade;](https://www.mathworks.com/products/robotics.html)
 - [ROS Toolbox](https://www.mathworks.com/products/ros.html)
 - [Computer Vision Toolbox&trade;](https://www.mathworks.com/products/computer-vision.html)
@@ -40,7 +41,7 @@ Installation instructions
 1. MATLAB installation: Visit installation instructions [webpage](https://in.mathworks.com/help/install/) to get started with the MATLAB installation process. 
 2. Support package installation: Before proceeding, ensure that the products mentioned under MathWorks Products above are installed. To install the Robotics System Toolbox Support Package for Universal Robots UR Series Manipulators, follow the steps mentioned [here](https://in.mathworks.com/help/supportpkg/urseries/ug/install-support-for-manipulator-hardware.html).  
 3. Download ROS Virtual Machine For Pre-Installed Gazebo Environment: You can download a virtual machine image that already has ROS and Gazebo installed. This virtual machine is based on Ubuntu® Linux® and is pre-configured to support the examples in ROS Toolbox™. Download and install the ROS virtual machine from this [link](https://in.mathworks.com/help/ros/ug/get-started-with-gazebo-and-a-simulated-turtlebot.html).
-4. YOLO Object Detector MAT files and Dataset: The example uses a pre-trained YOLOV4 object detector for identifying the Cuboid objects. Downlaod the detector MAt file from the following links.
+4. YOLO Object Detector MAT files and Dataset: The example uses a pre-trained YOLOV4 object detector for identifying the Cuboid objects. Downlaod the detector MAT file from the following links.
 - [Object detector and Dataset for Gazebo Simulation](https://ssd.mathworks.com/supportfiles/UniversalRobots/IntelligentBinPickingDataSet/Cuboidal_Object_Dataset_Sim.zip)
 - [Object detector and Dataset for UR5e Hardware](https://ssd.mathworks.com/supportfiles/UniversalRobots/IntelligentBinPickingDataSet/Cuboidal_Object_Dataset_Real.zip)
 
