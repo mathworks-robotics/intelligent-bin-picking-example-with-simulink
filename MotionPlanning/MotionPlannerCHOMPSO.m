@@ -33,7 +33,7 @@ classdef (StrictDefaults) MotionPlannerCHOMPSO < matlab.System
         Target = TargetEnvs.Gazebo;
 
         %IsMEXed Enable MEX
-        IsMEXed = boolean(false);
+        IsMEXed(1,1) logical = false;
     end
 
     properties (DiscreteState)
