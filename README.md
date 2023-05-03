@@ -6,8 +6,9 @@
 
 An Intelligent Bin Picking application consists of a perception algorithm to detect objects and a motion planning algorithm that creates the trajectory path of the robot to pick up the object. First the positions and orientations of the objects lying in the bin are identified from the Camera images using Deep Learning based Image processing capability from Computer Vision Toolbox. The calculated pose is then passed to motion-planning algorithm as an input which plans the path and the trajectory is generated for the Cobot to pick the objects from the bin and place it. 
 Using the [Robotics System Toolbox&trade; Support Package for Universal Robots UR Series Manipulators](https://www.mathworks.com/matlabcentral/fileexchange/117530-robotics-system-toolboxtm-support-package-for-universal-robots-ur-series-manipulators), you can establish ROS communication with Universal Robots manipulators and send the generated trajectory for the Cobot to pick up and place the objects at a destination location.This example is a Simulink based solution for the featured examples [Semi-Structured Intelligent Bin Picking for UR5e Using YOLO and PCA-Based Object Detection](https://in.mathworks.com/help/supportpkg/urseries/ug/semi-structured-bin-picking-ur5e-yolo-pca-example.html) and [Gazebo Simulation of Semi-Structured Intelligent Bin Picking for UR5e Using YOLO and PCA-Based Object Detection](https://in.mathworks.com/help/supportpkg/urseries/ug/gazebo-simulation-ur5e-semistructured-intelligent-bin-picking-example.html).
+  
+![BinPickingGazeboVsHardware](https://user-images.githubusercontent.com/128445518/235844636-9c259295-9618-454f-bb3d-3e7f6c5697f8.gif)
 
-![BinPickingGazeboVsHardware](https://user-images.githubusercontent.com/128445518/235844323-d3965120-bae0-471d-8e78-7fb990dd26f0.gif)
 
 <!--- If your project includes a visualation or any images or an App please include a screenshot in this README --->
 
