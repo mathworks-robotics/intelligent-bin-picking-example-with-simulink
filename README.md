@@ -53,9 +53,12 @@ open('IntelligentBinPickingExampleWithSimulink.prj')
 
 
 
-## Basic Examples
+## Examples
 
 To learn how to communicate with UR Series cobots over ROS, see [Getting Started with Connecting and Controlling a UR5e Cobot from Universal Robots](https://www.mathworks.com/help/supportpkg/urseries/ug/getting-started-controlling-ur5e.html). 
+  
+If you want to use Intelligent Bin Picking on Universal Robot with MATLAB® see the example [Intelligent Bin Picking in MATLAB for Universal Robots](https://in.mathworks.com/matlabcentral/fileexchange/125240-intelligent-bin-picking-in-matlab-for-universal-robots)
+  
 <!--- Make sure you have a repo set up correctly if you are to follow this formatting --->
 
 ## License
