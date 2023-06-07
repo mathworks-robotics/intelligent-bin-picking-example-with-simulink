@@ -56,8 +56,8 @@ end
 if isempty(chompPick)
     chompPick = manipulatorCHOMP(robot);
     chompPick.SphericalObstacles = sphobstacles;
-    chompPick.CollisionOptions.CollisionCostWeight = 10;
-    chompPick.SmoothnessOptions.SmoothnessCostWeight = 1e-3;
+    chompPick.CollisionOptions.CollisionCostWeight = 12;
+    chompPick.SmoothnessOptions.SmoothnessCostWeight = 1e-5;
     chompPick.SolverOptions.LearningRate = 5;
 end
 
@@ -68,8 +68,8 @@ if isempty(chompPlace)
 
     chompPlace = manipulatorCHOMP(robot);
     chompPlace.SphericalObstacles = sphobstacles;
-    chompPlace.CollisionOptions.CollisionCostWeight = 10;
-    chompPlace.SmoothnessOptions.SmoothnessCostWeight = 1e-3;
+    chompPlace.CollisionOptions.CollisionCostWeight = 12;
+    chompPlace.SmoothnessOptions.SmoothnessCostWeight = 1e-5;
     chompPlace.SolverOptions.LearningRate = 5;
 end
 
