@@ -32,6 +32,9 @@ classdef (StrictDefaults) MotionPlannerCHOMPSO < matlab.System
         %Target
         Target = TargetEnvs.Gazebo;
 
+        %GripperType
+        GripperType = GripperTypeEnum.Vaccum;
+
         %IsMEXed Enable MEX
         IsMEXed(1,1) logical = false;
     end
@@ -92,11 +95,11 @@ classdef (StrictDefaults) MotionPlannerCHOMPSO < matlab.System
     
                 if obj.IsMEXed
                     planPath = exampleHelperCHOMPMotionPlanner_mex(uint8(obj.Target), obj.BinLength, obj.BinWidth, obj.BinHeight, obj.BinCenterPosition, ...
-                        obj.BinRotation, double(numObstacles), obstaclePose, configs, ...
+                        obj.BinRotation, double(numObstacles), obstaclePose, configs, uint8(obj.GripperType),...
                         0);
                 else
                     planPath = exampleHelperCHOMPMotionPlanner(uint8(obj.Target), obj.BinLength, obj.BinWidth, obj.BinHeight, obj.BinCenterPosition, ...
-                        obj.BinRotation, double(numObstacles), obstaclePose, configs, ...
+                        obj.BinRotation, double(numObstacles), obstaclePose, configs,uint8(obj.GripperType), ...
                         0);
                 end
 

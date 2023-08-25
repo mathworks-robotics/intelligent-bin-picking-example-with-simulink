@@ -10,5 +10,6 @@ tf = coder.typeof(uint8(1));
 cnfgs = coder.typeof(1, [3,6], [1 0]);
 obs = coder.typeof(1, [20, 4], [1, 0]);
 objYaw = coder.typeof(1);
-codegen exampleHelperCHOMPMotionPlanner.m -args {tf, bl, bw, bh, bcp, br, no, obs, cnfgs, objYaw}
+GripperType = coder.typeof(uint8(1));
+codegen exampleHelperCHOMPMotionPlanner.m -args {tf, bl, bw, bh, bcp, br, no, obs, cnfgs, GripperType, objYaw}
 %#codegen

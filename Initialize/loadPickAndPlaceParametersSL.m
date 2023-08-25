@@ -5,9 +5,13 @@
 disp('************PickAndPlaceV3::Initializing parameters***************');
 
 %% Load gen 3 parameters (joint limits, numJoints) 
-fprintf('Loading Robot Model and Parameters...')
-rbt = loadrobot('universalUR5e','DataFormat','column');
-ur5e = exampleHelperAddGripper(rbt);
+% fprintf('Loading Robot Model and Parameters...')
+%default IP address of the ROS Device
+ROSDeviceAddress = '0.0.0.0';
+%default IP address of the Robot
+robotAddress = '192.168.1.10';
+%default gripper
+gripperType = GripperTypeEnum.Vaccum;
 robotParams = loadRobotParameters();
 fprintf('OK\n');
 

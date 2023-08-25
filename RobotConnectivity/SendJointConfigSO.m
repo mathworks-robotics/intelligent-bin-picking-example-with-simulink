@@ -42,8 +42,7 @@ classdef (StrictDefaults) SendJointConfigSO < matlab.System
             obj.URInterface = urHandleClass.manageURNodeMap(urKey,[],'get');
             if(isempty(obj.URInterface))
                 rbt = loadrobot(obj.RobotName,'DataFormat','row');
-                rbtWGripper = exampleHelperAddGripper(rbt);
-                obj.URInterface = universalrobot(obj.ROSDeviceAddress,'RigidBodyTree',rbtWGripper);
+                obj.URInterface = universalrobot(obj.ROSDeviceAddress,'RigidBodyTree',rbt);
                 urHandleClass.manageURNodeMap(urKey,obj.URInterface,'add');
             end
         end

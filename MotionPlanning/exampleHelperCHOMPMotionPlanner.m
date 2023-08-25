@@ -1,6 +1,6 @@
 function optimpickconfig = exampleHelperCHOMPMotionPlanner(targetFlag, ...
     binLength, binWidth, binHeight, binCenterPosition, binRotation, ...
-    numObstacles, obstaclePose, configs, objYaw)
+    numObstacles, obstaclePose, configs, GripperType,objYaw)
 %exampleHelperCHOMPMotionPlanner Implementation of CHOMP motion planner for
 %MEX
 % Commands for MEXing this function
@@ -42,7 +42,7 @@ if isempty(robot)
     rbt = importrobot("universalUR5e.urdf", 'DataFormat', 'row', 'MaxNumBodies',22);
     
     %Add gripper
-    robot = exampleHelperAddGripper(rbt);
+    robot = exampleHelperAddGripper(rbt,GripperType);
 
 
     %Modify the transform between th base and the first body for hardware

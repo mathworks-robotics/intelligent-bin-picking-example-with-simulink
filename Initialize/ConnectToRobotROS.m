@@ -5,7 +5,9 @@
 % object for precise motion planning.
 
 rbt = importrobot('universalUR5e.urdf','MaxNumBodies',22,'DataFormat','row');
-ur5e = exampleHelperAddGripper(rbt);
+ur5e = exampleHelperAddGripper(rbt,gripperType);
+tformZYX = eul2tform([0 0 0]);
+setFixedTransform(ur5e.Base.Children{1,2}.Joint,tformZYX);
 
 %Hardware specific paramters
 rotationFromRobotToCam = [0.0155 0.9989 -0.0447;0.9997 -0.0147 0.0176; 0.0169 -0.0450 -0.9988];
@@ -51,6 +53,8 @@ end
 
 % Create an instance to communicate with the UR5e cobot
 ur = universalrobot(deviceAddress,'RigidBodyTree',ur5e);
+urHandleClass.manageURNodeMap(deviceAddress,[],'remove');
+urHandleClass.manageURNodeMap(deviceAddress,ur,'add');
 % Move the robot to the home position
 % |homePosition| parameter is defined in the |initializeParametersForBinPickingHardware.m| 
 % script. You can find this script inside the *Initialize* folder of the project.

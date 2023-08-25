@@ -37,7 +37,7 @@ robotParams.JointAccLimits.Max = ...
 robotParams.NumJoints = numel(robotParams.JointPosLimits.Min);
 
 % Tooltip name
-robotParams.TooltipName = 'Bellow';
+robotParams.TooltipName = 'tcp';
 
 % Camera sensor
 robotParams.RGBCameraResolution = [720 1280 3];

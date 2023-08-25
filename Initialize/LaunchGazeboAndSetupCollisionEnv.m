@@ -10,16 +10,11 @@
 
 %% Connect to ROS host
 deviceAddress = ROSDeviceAddress; % IP address
-username = 'user'; % User name
-password = 'password'; % Password corresponds to user name
-
-ROSFolder = '/opt/ros/noetic'; % ROS installation folder
-WorkSpaceFolder = '~/ur_ws'; % UR ROS driver installation workspace folder location
-
 device = rosdevice(deviceAddress,username,password);
 device.ROSFolder = ROSFolder;
 
 %% Generate launch script and transfer it to ROS host computer.
+targetEnv = TargetEnvs.Gazebo;
 generateAndTransferLaunchScriptForUR5eSimGazebo(device,WorkSpaceFolder);
 
 if ~isCoreRunning(device)
@@ -36,10 +31,9 @@ rosshutdown;
 rosinit(deviceAddress);
 
 %% Load Rigid Body Tree model and add gripper
-if exist('ur5e', 'var') ~= 1
-    rbt = loadrobot('universalUR5e','DataFormat','row');
-    ur5e = exampleHelperAddGripper(rbt);
-end
+rbt = loadrobot('universalUR5e','DataFormat','row');
+gripperType = GripperTypeEnum.Vaccum; % Gazebo only support Vaccum gripper as of now
+ur5e = exampleHelperAddGripper(rbt,gripperType);
 
 %% Create an instance to communicate with the simulated UR5e cobot
 ur = universalrobot(deviceAddress,'RigidBodyTree',ur5e);
@@ -117,4 +111,4 @@ pause(3);
 % Create a collision environment for the planner
 collisionEnv = {};
 
-homePose = ur5e.getTransform(homePosition, 'Bellow', 'base');
+homePose = ur5e.getTransform(homePosition, 'tcp', 'base');
