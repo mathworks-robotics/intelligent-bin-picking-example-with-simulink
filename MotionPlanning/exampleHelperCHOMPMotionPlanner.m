@@ -14,7 +14,8 @@ function optimpickconfig = exampleHelperCHOMPMotionPlanner(targetFlag, ...
 % cnfgs = coder.typeof(1, [3,6], [1 0]);
 % obs = coder.typeof(1, [20, 4], [1, 0]);
 % objYaw = coder.typeof(1);
-% codegen exampleHelperCHOMPMotionPlanner.m -args {tf, bl, bw, bh, bcp, br, no, obs, cnfgs, objYaw}
+% GripperType = coder.typeof(uint8(1));
+% codegen exampleHelperCHOMPMotionPlanner.m -args {tf, bl, bw, bh, bcp, br, no, obs, cnfgs, GripperType, objYaw}
 %#codegen
 
 %Create a collision environment for the motion planner
@@ -39,7 +40,7 @@ persistent robot chompPlace chompPick
 
 if isempty(robot)
     %RBT model of UR5e
-    rbt = importrobot("universalUR5e.urdf", 'DataFormat', 'row', 'MaxNumBodies',22);
+    rbt = importrobot("universalUR5e.urdf", 'DataFormat', 'row', 'MaxNumBodies',24);
     
     %Add gripper
     robot = exampleHelperAddGripper(rbt,GripperType);
