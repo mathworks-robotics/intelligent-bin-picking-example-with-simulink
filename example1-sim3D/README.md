@@ -13,7 +13,7 @@ Using the [Robotics System Toolbox&trade; Support Package for Universal Robots U
 This project demonstrates the integration of a pre-trained Pose Mask R-CNN network for object detection with the Simulink&reg; 3D environment for simulating semi-structured PVC distribution systems. By leveraging the capabilities of the Simulation 3D Actor block and the [Pose Mask R-CNN 6-DoF Object Pose Estimation model](https://in.mathworks.com/matlabcentral/fileexchange/155869-computer-vision-toolbox-model-for-pose-mask-r-cnn-6-dof-object-pose-estimation) from the Computer Vision Toolbox™, you can simulate a photo-realistic environment and detect objects within the 3D environment without the need for external simulation platforms like Gazebo. This integration facilitates rapid design iterations and testing within a familiar Simulink virtual environment.
 
   
-![IBPExample](example1-sim3D/IBPExample.gif)
+![IBPExample](IBPExample.gif)
 
 
 <!--- If your project includes a visualation or any images or an App please include a screenshot in this README --->
