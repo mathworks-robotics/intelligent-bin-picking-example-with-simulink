@@ -1,0 +1,1 @@
+open('IntellingentBinPickingWithSimulinkForUR5eStartScript.mlx');
