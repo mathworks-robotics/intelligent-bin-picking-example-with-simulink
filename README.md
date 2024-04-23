@@ -6,7 +6,7 @@ Explore our specialized collection featuring intelligent bin picking solutions w
 
 ## Examples Overview
 
-### [Example 1: Intelligent Bin Picking with Simulink 3D Animation Unreal Environments (Simulink® and Simulink® 3D Animation™)]()
+### [Example 1: Intelligent Bin Picking with Simulink 3D Animation Unreal Environments (Simulink® and Simulink® 3D Animation™)](example1-sim3D)
 
 **Release:** R2024a
 
@@ -23,7 +23,7 @@ This example demonstrates an intelligent bin picking system for a semi-random ob
 **When to Use:** Use this example to explore bin picking solutions that do not require any third-party tools. It is also a good starting point for those looking to delve into photo-realistic 3D simulation environments and advanced pose estimation techniques.
 
 
-### [Example 2: Intelligent Bin Picking with Universal Robots UR5e Cobot (Simulink® and Universal Robots UR5e cobot/ Gazebo)]()
+### [Example 2: Intelligent Bin Picking with Universal Robots UR5e Cobot (Simulink® and Universal Robots UR5e cobot/ Gazebo)](example2- urCobot-gazebo)
 
 **Release:** R2023a
 
