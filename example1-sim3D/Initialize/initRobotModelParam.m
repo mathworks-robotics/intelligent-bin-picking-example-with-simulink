@@ -221,6 +221,3 @@ fprintf('OK\n');
 %%
 collisionEnv = {};
 disp('**********PickAndPlace::Parameter Initialization finished**********');
-%% Validate Selected Compiler
-disp('************Validating Selected Compiler***************');
-compilerValidation();
