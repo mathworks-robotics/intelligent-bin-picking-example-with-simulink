@@ -116,6 +116,11 @@ GPU configuration:
 <!--- Make sure you have a License.txt within your Repo --->
 The license is available in the License file within this repository.
 
+## Troubleshooting
+ 
+Issue: Building MEX function results in this error: `Error(s) encountered while building simulation target MEX-file for model 'IntelligentBinPicking'.`
+ 
+Solution: Ensure that the default MEX compilers for both C and C++ code generation are of the same type (for example, MinGW64 Compiler (C) and MinGW64 Compiler (C++)). To check the default MEX compiler for C and C++, run `mex -setup c` and `mex -setup cpp` respectively. MATLAB displays information about the default compilers for each language. If the compiler type is different, click the link of the compiler in the displayed message so that both compiler types match.
 
 ## Community Support
 You can post your queries on the [MATLAB Central](https://in.mathworks.com/matlabcentral/fileexchange/117530-robotics-system-toolboxtm-support-package-for-universal-robots-ur-series-manipulators) page for the support package.
