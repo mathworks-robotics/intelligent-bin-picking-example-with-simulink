@@ -88,7 +88,7 @@ classdef PoseMaskRCNNModel < matlab.System
 
             try
                 obj.Net = posemaskrcnn(obj.NetName);
-            catch
+            catch ME
 
                 blockPath = 'IntelligentBinPicking/Object Detector/PoseMaskRCNNModel';
                 if contains(ME.message, 'Graphics driver is out of date')
