@@ -24,8 +24,8 @@ rng('default');
 model_keys = ["Ishape", "Xshape", "Lshape", "Tshape"];
 
 count = 1;
-for aKey = model_keys    
-    ptFile = fullfile(proj.RootFolder,"Perception") + "\models\" + aKey + ".ply";
+for aKey = model_keys        
+    ptFile = fullfile(proj.RootFolder,"Perception" , "models",aKey + ".ply");
     if ~exist(ptFile, "file")
         continue
     end
@@ -114,8 +114,7 @@ end
 % save pose list as mat In Simulink model load this in 'Initialization scripts'.
 param.pose_list = pose_list;
 projDir = proj.RootFolder;
-save(fullfile(proj.RootFolder,"Perception")+"\generateParam.mat", "param","projDir"); %this mat is used in Simulink Actor block initialization scripts
-
+save(fullfile(proj.RootFolder,"Perception","generateParam.mat"), "param","projDir"); %this mat is used in Simulink Actor block initialization scripts
 %% This script contains the parameters used in the project modules' perception, motion planning, and integration.
 % This script runs at the time of project initialization. Change this
 % parameters accordingly if you are using any different setup.
