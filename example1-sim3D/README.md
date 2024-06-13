@@ -63,9 +63,9 @@ Open the project to get started with bin picking example. Then, navigate to the 
 >> open_system('SimulinkModel/IntelligentBinPicking.slx');
 ```
 ## Run Model with Faster Motion Planning
-You can reduce the time taken by the motion planning algorithm by creating a MEX function. Generating a MEX function using C/C++ code generation helps to reduce the computation time and hence reduces the pick and place cycle time.<br>
-For more information on how to create a MEX function for the manipulatorRRT algorithm-based planner, see the [Generate Code for Manipulator Motion Planning in Perceived Environment](https://mathworks.com/help/robotics/ug/generate-code-for-manipulator-motion-planning-in-perceived-environment.html) example.<br>
-For more information on generating MEX function to accelerate your MATLAB program execution, see the [Accelerate MATLAB Algorithm by Generating MEX Function](https://mathworks.com/help/coder/gs/generating-mex-functions-from-matlab-code-at-the-command-line.html) example.<br>
+You can reduce the time taken by the motion planning algorithm by creating a MEX function. Generating a MEX function using C/C++ code generation helps to reduce the computation time and hence reduces the pick and place cycle time.<br><br>
+For more information on how to create a MEX function for the manipulatorRRT algorithm-based planner, see the [Generate Code for Manipulator Motion Planning in Perceived Environment](https://mathworks.com/help/robotics/ug/generate-code-for-manipulator-motion-planning-in-perceived-environment.html) example.<br><br>
+For more information on generating MEX function to accelerate your MATLAB program execution, see the [Accelerate MATLAB Algorithm by Generating MEX Function](https://mathworks.com/help/coder/gs/generating-mex-functions-from-matlab-code-at-the-command-line.html) example.<br><br>
 
 Step1: Create MEX for the exampleHelperCHOMPMotionPlanner function.
 ```matlab
