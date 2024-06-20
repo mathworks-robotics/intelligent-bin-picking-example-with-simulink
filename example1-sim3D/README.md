@@ -49,12 +49,6 @@ Installation instructions
 
 For more information about installing add-ons, see [Get and Manage Add-Ons](https://in.mathworks.com/help/matlab/matlab_env/get-add-ons.html). The Computer Vision Toolbox Model for Pose Mask R-CNN 6-DoF Object Pose Estimation requires Deep Learning Toolbox™ and Image Processing Toolbox™.
 
-## MEX Compiler Configuration
-This example requires Microsoft Visual C++ as the MEX compiler. To check and configure the MEX compiler:
-
-1. In the MATLAB Command Window, enter mex -setup.
-2. If the current compiler name that is being displayed is not Microsoft Visual C++, click "Microsoft Visual C++ (C)" from the list of available compilers. Ensure that the version for Microsoft Visual C++ is 14.0 or higher.
-
 ## Getting started with Bin picking example
 Open the project to get started with bin picking example. Then, navigate to the `SimulinkModel` directory and open `IntelligentBinPicking.slx`.
 
