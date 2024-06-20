@@ -87,6 +87,7 @@ For a detailed list of requirements and limitations, refer to [Unreal Engine Sim
 
 The example has been tested on the following GPU configuration:
 
+#### Windows
 ```plaintext
 GPU configuration:
 
@@ -107,6 +108,36 @@ GPU configuration:
   CachePolicy: 'balanced'
   MultiprocessorCount: 68
   ClockRateKHz: 1725000
+  ComputeMode: 'Default'
+  GPUOverlapsTransfers: 1
+  KernelExecutionTimeout: 1
+  CanMapHostMemory: 1
+  DeviceSupported: 1
+  DeviceAvailable: 1
+  DeviceSelected: 1
+```
+
+#### Debian® 11
+```plaintext
+GPU configuration:
+
+  Name: 'NVIDIA TITAN Xp'
+  Index: 1
+  ComputeCapability: '6.1'
+  SupportsDouble: 1
+  GraphicsDriverVersion: '555.42.02'
+  DriverModel: 'N/A'
+  ToolkitVersion: 12.2000
+  MaxThreadsPerBlock: 1024
+  MaxShmemPerBlock: 49152 (49.15 KB)
+  MaxThreadBlockSize: [1024 1024 64]
+  MaxGridSize: [2.1475e+09 65535 65535]
+  SIMDWidth: 32
+  TotalMemory: 12774408192 (12.77 GB)
+  AvailableMemory: 7546579440 (7.55 GB)
+  CachePolicy: 'balanced'
+  MultiprocessorCount: 30
+  ClockRateKHz: 1582000
   ComputeMode: 'Default'
   GPUOverlapsTransfers: 1
   KernelExecutionTimeout: 1
