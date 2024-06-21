@@ -49,12 +49,6 @@ Installation instructions
 
 For more information about installing add-ons, see [Get and Manage Add-Ons](https://in.mathworks.com/help/matlab/matlab_env/get-add-ons.html). The Computer Vision Toolbox Model for Pose Mask R-CNN 6-DoF Object Pose Estimation requires Deep Learning Toolbox™ and Image Processing Toolbox™.
 
-## MEX Compiler Configuration
-This example requires Microsoft Visual C++ as the MEX compiler. To check and configure the MEX compiler:
-
-1. In the MATLAB Command Window, enter mex -setup.
-2. If the current compiler name that is being displayed is not Microsoft Visual C++, click "Microsoft Visual C++ (C)" from the list of available compilers. Ensure that the version for Microsoft Visual C++ is 14.0 or higher.
-
 ## Getting started with Bin picking example
 Open the project to get started with bin picking example. Then, navigate to the `SimulinkModel` directory and open `IntelligentBinPicking.slx`.
 
@@ -62,7 +56,18 @@ Open the project to get started with bin picking example. Then, navigate to the 
 >> open('IntelligentBinPickingExampleWithSimulink.prj');
 >> open_system('SimulinkModel/IntelligentBinPicking.slx');
 ```
+## Run Model with Faster Motion Planning
+You can reduce the time taken by the motion planning algorithm by creating a MEX function. Generating a MEX function using C/C++ code generation helps to reduce the computation time and hence reduces the pick and place cycle time.<br><br>
+For more information on how to create a MEX function for the manipulatorRRT algorithm-based planner, see the [Generate Code for Manipulator Motion Planning in Perceived Environment](https://mathworks.com/help/robotics/ug/generate-code-for-manipulator-motion-planning-in-perceived-environment.html) example.<br><br>
+For more information on generating MEX function to accelerate your MATLAB program execution, see the [Accelerate MATLAB Algorithm by Generating MEX Function](https://mathworks.com/help/coder/gs/generating-mex-functions-from-matlab-code-at-the-command-line.html) example.<br><br>
 
+Step1: Create MEX for the exampleHelperCHOMPMotionPlanner function.
+```matlab
+>> generateMEXForPlanner
+```
+Step2: Select the `Enable MEX` option in MotionPlannerCHOMP block in the Motion Planner subsystem.<br>
+
+![image](https://github.com/Aditya-Innovacious/intelligent-bin-picking-example-with-simulink/assets/167069380/f15188e1-5c1d-4466-9ab3-f2b9cacf6ba9)
 
 ## Examples
 
@@ -83,6 +88,7 @@ For a detailed list of requirements and limitations, refer to [Unreal Engine Sim
 
 The example has been tested on the following GPU configuration:
 
+#### Windows
 ```plaintext
 GPU configuration:
 
@@ -103,6 +109,36 @@ GPU configuration:
   CachePolicy: 'balanced'
   MultiprocessorCount: 68
   ClockRateKHz: 1725000
+  ComputeMode: 'Default'
+  GPUOverlapsTransfers: 1
+  KernelExecutionTimeout: 1
+  CanMapHostMemory: 1
+  DeviceSupported: 1
+  DeviceAvailable: 1
+  DeviceSelected: 1
+```
+
+#### Debian® 11
+```plaintext
+GPU configuration:
+
+  Name: 'NVIDIA TITAN Xp'
+  Index: 1
+  ComputeCapability: '6.1'
+  SupportsDouble: 1
+  GraphicsDriverVersion: '555.42.02'
+  DriverModel: 'N/A'
+  ToolkitVersion: 12.2000
+  MaxThreadsPerBlock: 1024
+  MaxShmemPerBlock: 49152 (49.15 KB)
+  MaxThreadBlockSize: [1024 1024 64]
+  MaxGridSize: [2.1475e+09 65535 65535]
+  SIMDWidth: 32
+  TotalMemory: 12774408192 (12.77 GB)
+  AvailableMemory: 7546579440 (7.55 GB)
+  CachePolicy: 'balanced'
+  MultiprocessorCount: 30
+  ClockRateKHz: 1582000
   ComputeMode: 'Default'
   GPUOverlapsTransfers: 1
   KernelExecutionTimeout: 1
