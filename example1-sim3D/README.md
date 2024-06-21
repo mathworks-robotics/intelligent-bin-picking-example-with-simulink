@@ -67,7 +67,7 @@ Step1: Create MEX for the exampleHelperCHOMPMotionPlanner function.
 ```
 Step2: Select the `Enable MEX` option in MotionPlannerCHOMP block in the Motion Planner subsystem.<br>
 
-![image](https://github.com/Aditya-Innovacious/intelligent-bin-picking-example-with-simulink/assets/167069380/f15188e1-5c1d-4466-9ab3-f2b9cacf6ba9)
+<img src="https://github.com/Aditya-Innovacious/intelligent-bin-picking-example-with-simulink/assets/167069380/f15188e1-5c1d-4466-9ab3-f2b9cacf6ba9" width="600"><br>
 
 ## Examples
 
