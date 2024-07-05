@@ -162,7 +162,7 @@ The license is available in the License file within this repository.
  
 **Solution:** Ensure that the default MEX compilers for both C and C++ code generation are of the same type (for example, MinGW64 Compiler (C) and MinGW64 Compiler (C++)). To check the default MEX compiler for C and C++, run `mex -setup c` and `mex -setup cpp` respectively. MATLAB displays information about the default compilers for each language. If the compiler type is different, click the link of the compiler in the displayed message so that both compiler types match.
 
-#### Issue: Robot joints goes to undesired position multiple times during the simulation
+#### Issue: Robot joints goes to undesired position multiple times during the simulation.
 
 **Solution:** Change the configuration to send trajectory waypoints at a reduced rate. To do this, perform one of these actions:
 - After opening the model `IntelligentBinPicking.slx`, run these two commands in MATLAB to assign new values to the corresponding parameters:
