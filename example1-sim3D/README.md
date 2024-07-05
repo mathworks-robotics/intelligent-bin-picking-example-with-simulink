@@ -28,6 +28,8 @@ More information about Trademarks can be found internally within the Checklist f
 Requires MATLAB&reg; release R2024a or higher
 - [MATLAB&reg;](https://www.mathworks.com/products/matlab.html)
 - [Simulink&reg;](https://in.mathworks.com/products/simulink.html)
+- [MATLAB Coder&trade;](https://www.mathworks.com/products/matlab-coder.html)
+- [Parallel Computing Toolbox&trade;](https://in.mathworks.com/products/parallel-computing.html)
 - [Stateflow&reg;](https://in.mathworks.com/products/stateflow.html)
 - [Robotics System Toolbox&trade;](https://www.mathworks.com/products/robotics.html)
 - [Simulink 3D Animation&trade;](https://in.mathworks.com/products/3d-animation.html)
@@ -56,6 +58,8 @@ Open the project to get started with bin picking example. Then, navigate to the 
 >> open('IntelligentBinPickingExampleWithSimulink.prj');
 >> open_system('SimulinkModel/IntelligentBinPicking.slx');
 ```
+After you start the simulation of the model, open Diagnostic Viewer (click "View Diagnostics") to observe the information about the robot action that is in progress.<br>
+
 ## Run Model with Faster Motion Planning
 You can reduce the time taken by the motion planning algorithm by creating a MEX function. Generating a MEX function using C/C++ code generation helps to reduce the computation time and hence reduces the pick and place cycle time.<br><br>
 For more information on how to create a MEX function for the manipulatorRRT algorithm-based planner, see the [Generate Code for Manipulator Motion Planning in Perceived Environment](https://mathworks.com/help/robotics/ug/generate-code-for-manipulator-motion-planning-in-perceived-environment.html) example.<br><br>
@@ -154,9 +158,23 @@ The license is available in the License file within this repository.
 
 ## Troubleshooting
  
-Issue: Building MEX function results in this error: `Error(s) encountered while building simulation target MEX-file for model 'IntelligentBinPicking'.`
+#### Issue: Building MEX function results in this error: `Error(s) encountered while building simulation target MEX-file for model 'IntelligentBinPicking'.`
  
-Solution: Ensure that the default MEX compilers for both C and C++ code generation are of the same type (for example, MinGW64 Compiler (C) and MinGW64 Compiler (C++)). To check the default MEX compiler for C and C++, run `mex -setup c` and `mex -setup cpp` respectively. MATLAB displays information about the default compilers for each language. If the compiler type is different, click the link of the compiler in the displayed message so that both compiler types match.
+**Solution:** Ensure that the default MEX compilers for both C and C++ code generation are of the same type (for example, MinGW64 Compiler (C) and MinGW64 Compiler (C++)). To check the default MEX compiler for C and C++, run `mex -setup c` and `mex -setup cpp` respectively. MATLAB displays information about the default compilers for each language. If the compiler type is different, click the link of the compiler in the displayed message so that both compiler types match.
+
+#### Issue: Robot joints goes to undesired position multiple times during the simulation
+
+**Solution:** Change the configuration to send trajectory waypoints at a reduced rate. To do this, perform one of these actions:
+- After opening the model `IntelligentBinPicking.slx`, run these two commands in MATLAB to assign new values to the corresponding parameters:
+```matlab
+>> graspRegionTranslation = [0.0140, 0.0140, 0.0260];
+>> downSampleForTrajectoryWaypoints = 10;
+```
+- Open the initialization script `~\example1-sim3D\Initialize\initRobotModelParam.m`, and modify the two parameters `graspRegionTranslation` and `downSampleForTrajectoryWaypoints` to assign the new values as shown in the first option.
+
+#### Issue: A warning "Known issues with graphic driver" appears, with suggestion to upgrade the graphics driver.
+
+**Solution:** Ideally, you should upgrade to the latest version of the graphics driver. However, if you do not want to upgrade to the latest version, open `IntelligentBinPicking/Object Detector/PoseMaskRCNNModel` block in the Simulink model, and set the value of `ExecutionEnvironment` parameter to `cpu`.
 
 ## Community Support
 You can post your queries on the [MATLAB Central](https://in.mathworks.com/matlabcentral/fileexchange/117530-robotics-system-toolboxtm-support-package-for-universal-robots-ur-series-manipulators) page for the support package.
