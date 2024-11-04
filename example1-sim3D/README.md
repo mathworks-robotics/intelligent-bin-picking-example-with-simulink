@@ -1,7 +1,7 @@
 # Intelligent Bin Picking with Simulink® 3D Animation™ for Semi-Random Object Distribution Using Simulink&reg;
 <!-- This is the "Title of the contribution" that was approved during the Community Contribution Review Process --> 
 
-[![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/####-file-exchange-title)  
+[![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://in.mathworks.com/matlabcentral/fileexchange/128699-intelligent-bin-picking-with-simulink-for-ur5e-cobot)  
 <!-- Add this icon to the README if this repo also appears on File Exchange via the "Connect to GitHub" feature --> 
 
 In robotics, bin picking involves using a manipulator to retrieve items from a bin. Intelligent bin picking represents an advanced version of this process, offering greater autonomy. It possesses the capability to perceive parts, accurately identify and classify them. Then plan collision-free paths to sort the parts based on their classification. 
