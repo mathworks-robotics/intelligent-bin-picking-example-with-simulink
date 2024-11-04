@@ -1,7 +1,7 @@
 # Intelligent Bin Picking with Universal Robots UR5e Cobot for a semi-random object distribution using Simulink&reg;
 <!-- This is the "Title of the contribution" that was approved during the Community Contribution Review Process --> 
 
-[![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://in.mathworks.com/matlabcentral/fileexchange/128699-intelligent-bin-picking-with-simulink-for-ur5e-cobot)  
+[![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/128699-intelligent-bin-picking-with-simulink-for-ur5e-cobot)  
 <!-- Add this icon to the README if this repo also appears on File Exchange via the "Connect to GitHub" feature --> 
 
 An Intelligent Bin Picking application consists of a perception algorithm to detect objects and a motion planning algorithm that creates the trajectory path of the robot to pick up the object. First the positions and orientations of the objects lying in the bin are identified from the Camera images using Deep Learning based Image processing capability from Computer Vision Toolbox. The calculated pose is then passed to motion-planning algorithm as an input which plans the path and the trajectory is generated for the Cobot to pick the objects from the bin and place it. 
